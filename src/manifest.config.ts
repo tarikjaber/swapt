@@ -48,4 +48,24 @@ export default defineManifest(async (env) => ({
         },
     },
     permissions: ["storage", "sidePanel"] as chrome.runtime.ManifestPermissions[],
+    commands: {
+        session_1: {
+            suggested_key: {
+                default: "Alt+S",
+            },
+            description: "Switch to session 1",
+        },
+        session_2: {
+            suggested_key: {
+                default: "Alt+D",
+            },
+            description: "Switch to session 2",
+        },
+        session_3: {
+            suggested_key: {
+                default: "Alt+F",
+            },
+            description: "Switch to session 3",
+        }
+    }
 }));

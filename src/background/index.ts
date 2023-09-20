@@ -8,6 +8,10 @@ chrome.runtime.onInstalled.addListener(() => {
     storage.get().then(console.log);
 });
 
+chrome.commands.onCommand.addListener((command) => {
+    console.log(`Command: ${command}`);
+});
+
 // NOTE: If you want to toggle the side panel from the extension's action button,
 // you can use the following code:
 // chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })
